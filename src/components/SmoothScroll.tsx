@@ -7,7 +7,8 @@ export function SmoothScroll() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    const lenis = new Lenis({ lerp: 0.11, anchors: true });
+    const headerH = document.querySelector("header")?.offsetHeight ?? 0;
+    const lenis = new Lenis({ lerp: 0.11, anchors: { offset: -headerH } });
     let frame = requestAnimationFrame(function raf(time) {
       lenis.raf(time);
       frame = requestAnimationFrame(raf);
