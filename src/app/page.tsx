@@ -6,11 +6,13 @@ import { Marquee } from "@/components/Marquee";
 import { Nav } from "@/components/Nav";
 import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
+import { SmoothScroll } from "@/components/SmoothScroll";
 import { StackSection } from "@/components/StackSection";
 
 export default function Home() {
   return (
     <>
+      <SmoothScroll />
       <Nav />
       <main>
         <StackSection index={1} card={false}>
