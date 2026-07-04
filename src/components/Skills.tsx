@@ -1,18 +1,11 @@
 import { skillGroups } from "@/lib/data";
 import { Reveal } from "@/components/Reveal";
-import { SectionHeading } from "@/components/SectionHeading";
 
 export function Skills() {
   return (
-    <section id="stack" className="px-6 py-28 lg:px-10">
+    <section className="px-6 pb-24 lg:px-10">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading
-          index="02"
-          title="The Stack"
-          hint="Tools I reach for when it matters"
-        />
-
-        <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
           {skillGroups.map((group, i) => (
             <div key={group.label} className="bg-ink p-8">
               <Reveal delay={i * 0.08}>

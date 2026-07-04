@@ -1,14 +1,11 @@
 import { about, stats } from "@/lib/data";
 import { Reveal } from "@/components/Reveal";
-import { SectionHeading } from "@/components/SectionHeading";
 
 export function About() {
   return (
-    <section id="about" className="px-6 py-28 lg:px-10">
+    <section className="px-6 pb-24 lg:px-10">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading index="04" title="About" />
-
-        <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <Reveal>
             <p className="display text-3xl font-medium leading-tight md:text-4xl">
               “<span className="text-accent">{about.statement}</span>”

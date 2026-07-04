@@ -4,7 +4,7 @@ import { Reveal } from "@/components/Reveal";
 
 export function Contact() {
   return (
-    <footer id="contact" className="px-6 pt-28 lg:px-10">
+    <footer className="px-6 pt-24 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <span className="font-mono text-xs uppercase tracking-widest text-accent">

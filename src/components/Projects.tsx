@@ -1,15 +1,12 @@
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/lib/data";
 import { Reveal } from "@/components/Reveal";
-import { SectionHeading } from "@/components/SectionHeading";
 
 export function Projects() {
   return (
-    <section id="work" className="px-6 py-28 lg:px-10">
+    <section className="px-6 pb-24 lg:px-10">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading index="01" title="Selected Work" />
-
-        <div className="mt-16 border-t border-line">
+        <div className="border-t border-line">
           {projects.map((project, i) => (
             <Reveal key={project.title} delay={i * 0.05}>
               <a

@@ -9,10 +9,7 @@ const ease = [0.21, 0.47, 0.32, 0.98] as const;
 
 export function Hero() {
   return (
-    <section
-      id="top"
-      className="relative flex min-h-svh flex-col justify-end px-6 pb-16 pt-32 lg:px-10"
-    >
+    <section className="relative flex min-h-svh flex-col justify-end px-6 pb-16 pt-32 lg:px-10">
       <ParticleField />
       {/* Fade the field out behind the text so the name stays legible */}
       <div
