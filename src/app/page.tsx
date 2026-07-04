@@ -6,20 +6,33 @@ import { Marquee } from "@/components/Marquee";
 import { Nav } from "@/components/Nav";
 import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
+import { StackSection } from "@/components/StackSection";
 
 export default function Home() {
   return (
     <>
       <Nav />
       <main>
-        <Hero />
-        <Marquee />
-        <Projects />
-        <Skills />
-        <Experience />
-        <About />
+        <StackSection index={1} card={false}>
+          <Hero />
+          <Marquee />
+        </StackSection>
+        <StackSection index={2}>
+          <Projects />
+        </StackSection>
+        <StackSection index={3}>
+          <Skills />
+        </StackSection>
+        <StackSection index={4}>
+          <Experience />
+        </StackSection>
+        <StackSection index={5}>
+          <About />
+        </StackSection>
+        <StackSection index={6}>
+          <Contact />
+        </StackSection>
       </main>
-      <Contact />
     </>
   );
 }

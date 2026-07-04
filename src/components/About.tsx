@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export function About() {
   return (
-    <section id="about" className="border-t border-line px-6 py-28 lg:px-10">
+    <section id="about" className="px-6 py-28 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <SectionHeading index="04" title="About" />
 

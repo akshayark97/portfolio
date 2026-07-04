@@ -6,7 +6,7 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="border-t border-line px-6 py-28 lg:px-10"
+      className="px-6 py-28 lg:px-10"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeading index="03" title="Experience" />
