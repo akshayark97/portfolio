@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Akshay — Portfolio
 
-## Getting Started
+A dark, editorial developer portfolio built with **Next.js 16, Tailwind CSS 4, and Motion**. Design inspired by Shopify Editions: big display type, mono labels, acid-lime accent, kinetic marquee, scroll-reveal animations.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # http://localhost:3000
+npm run build    # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Customize everything in one file
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All content lives in **`src/lib/data.ts`** — no component edits needed:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| What | Where in `data.ts` |
+| --- | --- |
+| Name, role, headline, email, location | `site` |
+| Availability badge | `site.available` / `site.availableText` |
+| Social links (GitHub, LinkedIn, X) | `site.socials` — **replace `your-username`** |
+| Skill ticker in hero | `marqueeItems` |
+| Projects (title, description, tags, link, gradient art) | `projects` |
+| Skill groups | `skillGroups` |
+| Work history | `experience` |
+| Bio + pull-quote | `about` |
+| Stats row | `stats` |
 
-## Learn More
+## Your resume
 
-To learn more about Next.js, take a look at the following resources:
+Replace **`public/resume.pdf`** with your real resume (keep the filename, or update `site.resumeUrl` in `data.ts`). The current file is a placeholder.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Change the look
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Colors**: edit the `@theme` block in `src/app/globals.css` (`--color-accent` is the lime; try `#ff5c38` for orange or `#7c5cff` for violet).
+- **Fonts**: swap the Google fonts in `src/app/layout.tsx` (`Space_Grotesk` = display, `Inter` = body, `JetBrains_Mono` = labels).
+- **Grain texture**: remove the `noise` class from `<body>` in `layout.tsx` to disable it.
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push to GitHub and import into [Vercel](https://vercel.com/new) — zero config needed.
