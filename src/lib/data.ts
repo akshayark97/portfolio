@@ -63,7 +63,9 @@ export type Project = {
   description: string;
   tags: string[];
   year: string;
-  href: string;
+  // Omit href for proprietary/NDA work — the row renders with a lock
+  // instead of a link.
+  href?: string;
   // Tailwind gradient classes for the preview art.
   art: string;
 };
@@ -77,7 +79,6 @@ export const projects: Project[] = [
       "Owned end-to-end design and delivery of an AI-powered post-purchase experience that lets customers self-schedule service appointments — shipped across web and mobile, on schedule.",
     tags: ["Next.js", "React Native", "GraphQL", "Node.js"],
     year: "2025",
-    href: "#",
     art: "from-lime-300 via-emerald-500 to-teal-900",
   },
   {
@@ -88,7 +89,6 @@ export const projects: Project[] = [
       "A privacy-first PWA for tracking a ₹1Cr investment journey. Works fully offline, syncs when it can, and turns a spreadsheet habit into a product.",
     tags: ["PWA", "Local-first", "IndexedDB", "Charts"],
     year: "2026",
-    href: "#",
     art: "from-amber-200 via-orange-500 to-rose-900",
   },
   {
@@ -99,7 +99,6 @@ export const projects: Project[] = [
       "A credential-management platform serving millions of customers — secure authentication and authorization flows, engineered to stay fast on low-power devices and older phones.",
     tags: ["React", "Security", "WCAG", "Performance"],
     year: "2024",
-    href: "#",
     art: "from-sky-300 via-blue-600 to-indigo-950",
   },
   {
@@ -110,8 +109,29 @@ export const projects: Project[] = [
       "A multi-country ticketing portal for reporting automotive part issues — localized across international markets on a reusable, component-based React architecture.",
     tags: ["React", "i18n", "Component Systems", "Enterprise"],
     year: "2024",
-    href: "#",
     art: "from-fuchsia-300 via-purple-600 to-violet-950",
+  },
+  {
+    index: "05",
+    title: "Seasonal Fruits",
+    tagline: "React Native produce guide",
+    description:
+      "A native-quality mobile app educating users about fruit varieties, practical uses, and how to source fresh produce — built end-to-end with React Native.",
+    tags: ["React Native", "iOS", "Android", "Open Source"],
+    year: "2023",
+    href: "https://github.com/akshayark97/SeasonalFruits",
+    art: "from-emerald-200 via-green-500 to-lime-900",
+  },
+  {
+    index: "06",
+    title: "ShopPay",
+    tagline: "Full-stack e-commerce",
+    description:
+      "An online shopping application with browsing, cart, checkout, and authentication — Next.js with Redux Toolkit, NextAuth, and MongoDB behind it.",
+    tags: ["Next.js", "Redux Toolkit", "MongoDB", "Open Source"],
+    year: "2022",
+    href: "https://github.com/akshayark97/shoppay",
+    art: "from-rose-200 via-pink-500 to-purple-950",
   },
 ];
 
